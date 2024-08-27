@@ -30,6 +30,7 @@ int main()
     gets(infix);
     convert();
     print();
+    return 0;
 }
 int precedence(char symbol)
 {
@@ -47,6 +48,7 @@ int precedence(char symbol)
         default :
             return 0;
     }
+    return;
 }
 
 void convert()
@@ -94,6 +96,7 @@ void push(char c)
     top++;
     stack[top] = c;
    }
+   return;
 }
 char pop()
 {     int c;
