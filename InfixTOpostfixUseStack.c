@@ -11,19 +11,11 @@ void push(char);
 char pop();
 int isEmpty();
 void convert();
-// int space(char);
+ int space(char);
 void print();
 int precedence(char symbol);
 
-void print()
-{    int k=0;
-    while(postfix[k] !='\0')
-    {
-        printf("%c",postfix[k]);
-        k++;
-    }
-    printf("\n");
-}
+
 int main()
 {
     printf("Enter the indix expression : ");
@@ -48,7 +40,7 @@ int precedence(char symbol)
         default :
             return 0;
     }
-    return;
+    
 }
 
 void convert()
@@ -58,6 +50,8 @@ void convert()
     for(i=0 ; i< strlen(infix) ; i++) 
     {
         symbol = infix[i]; 
+    if(!space(symbol))
+        {
         switch(symbol)
         {
             case '(' : 
@@ -77,8 +71,9 @@ void convert()
 
             default :
                 postfix[j++] = symbol;
-                    
         }
+                    
+    }
     }
     while(!isEmpty())
         postfix[j++] = pop();
@@ -120,6 +115,29 @@ int isEmpty()
     {
         return 0;
     }
+}
+
+void print()
+{    int k=0;
+    while(postfix[k] !='\0')
+    {
+        printf("%c",postfix[k]);
+        k++;
+    }
+    printf("\n");
+}
+
+int space(char c)
+{
+    if(c== ' ' || c=='\t')
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+   
 }
 
     
