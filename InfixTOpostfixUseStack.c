@@ -29,6 +29,7 @@ int precedence(char symbol)
     switch(symbol)
     {
         //Higher value means greater precendence
+
         case '^' :
             return 3;
         case '/' :
@@ -128,7 +129,7 @@ void print()
 }
 
 int space(char c)
-{
+{  //read space and ingnor it
     if(c== ' ' || c=='\t')
     {
         return 1;
