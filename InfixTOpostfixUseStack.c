@@ -63,6 +63,7 @@ void convert()
                         break;
             case '+' :
             case '-' :
+            case '*' :
             case '/' :
             case '^' :
                  while(!isEmpty() && precedence(stack[top]) >= precedence(symbol))
@@ -71,14 +72,14 @@ void convert()
 
             default :
                 postfix[j++] = symbol;
-        }
+            }
                     
-    }
+        }
     }
     while(!isEmpty())
         postfix[j++] = pop();
     postfix[j] = '\0';
-    return;
+    
 }
 
 void push(char c)
@@ -86,24 +87,23 @@ void push(char c)
    if(top == MAX-1)
    {
     printf("Overflow\n");
+    return;
    }
-   else{
     top++;
     stack[top] = c;
-   }
-   return;
 }
 char pop()
-{     int c;
-    if(top==-1)
+{     char c;
+    if(top == -1)
     {
         printf("Underflow\n");
+        exit(1);
     }
-   else{
+   
    c = stack[top];
-   top--;
+   top = top-1;
    return c;
-   }
+   
 }
 int isEmpty()
 {
@@ -119,10 +119,10 @@ int isEmpty()
 
 void print()
 {    int k=0;
-    while(postfix[k] !='\0')
+    while(postfix[k]  != '\0')
     {
-        printf("%c",postfix[k]);
-        k++;
+        printf("%c",postfix[k++]);
+        
     }
     printf("\n");
 }
