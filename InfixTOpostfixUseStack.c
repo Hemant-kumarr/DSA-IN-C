@@ -61,7 +61,7 @@ void convert()
             case ')' :
                     while((next = pop()) != '(')
                         postfix[j++] = next;
-                        break;
+                        
             case '+' :
             case '-' :
             case '*' :
