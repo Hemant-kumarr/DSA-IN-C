@@ -45,7 +45,7 @@ void dequeue()
     {
          x = Q[front];
         printf("%d is deleted\n",x);
-        front++;
+        front = (front +1)%N;
         
     }
     return;
