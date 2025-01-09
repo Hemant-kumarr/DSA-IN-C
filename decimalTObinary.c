@@ -18,7 +18,7 @@ void push(int x)
 {    
     if(top == MAX - 1)
     {
-    printf("Stack overflow\n");
+      printf("Stack overflow\n");
     }
     top = top + 1;
     stack[top] = x;
