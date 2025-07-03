@@ -5,6 +5,7 @@ void binarysearch(int arr[], int l, int h, int target)
     if (l > h)
     {
         printf("Element not found in array ");
+        return;
     }
     int mid = (l + h) / 2;
     if (target == arr[mid])
