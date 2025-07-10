@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void binarySearch(int arr[], int n) {
+void linearsearch(int arr[], int n) {
     int target;
     int a = 0;
     printf("Enter the target element you want to search: ");
@@ -31,7 +31,7 @@ int main() {
         scanf("%d", &arr[i]);
     }
     
-    binarySearch(arr, n);
+    linearsearch(arr, n);
 
     return 0;
 }
