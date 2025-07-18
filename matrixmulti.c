@@ -27,7 +27,7 @@ int main(){
     printf("Result : \n");
     for(int i = 0 ; i<2 ; i++){
         for(int j = 0 ; j<2 ; j++){
-            printf("%d",res[i][j]);
+            printf("%d ",res[i][j]);
         }
         printf("\n");
     }
