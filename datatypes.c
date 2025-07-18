@@ -6,6 +6,13 @@ struct Student {
     float marks;
 };
 
+
+union Data {
+    int i;
+    float f;
+};
+
+
 int main(){
     printf("Primitive data type:\n ");
     int a = 1;
@@ -64,5 +71,10 @@ int main(){
     for(int i = 1 ; i<=3 ; i++){
         printf("Name: %s, Roll: %d, Marks: %.2f\n", st[i].name, st[i].roll, st[i].marks);
     }
+
+    union Data d;
+    d.i = 10;
+    d.f = 3.14;  // Overwrites `i`
+    printf("f = %.2f\n", d.f);
     return 0;
 }
