@@ -12,6 +12,16 @@ union Data {
     float f;
 };
 
+enum Day {
+    SUNDAY,     // 0
+    MONDAY,     // 1
+    TUESDAY,    // 2
+    WEDNESDAY,  // 3
+    THURSDAY,   // 4
+    FRIDAY,     // 5
+    SATURDAY    // 6
+};
+
 
 int main(){
     printf("Primitive data type:\n");
@@ -76,6 +86,13 @@ int main(){
     d.i = 10;
     d.f = 3.14;  // Overwrites `i`
     printf("f = %.2f\n", d.f);
-    printf("%lu" , sizeof(d));
+    printf("%lu\n" , sizeof(d));
+
+    enum Day today;
+
+    today = WEDNESDAY;
+
+    printf("Day number is: %d\n", today);  // Output: 3
+    printf("%lu" , sizeof(today));
     return 0;
 }
