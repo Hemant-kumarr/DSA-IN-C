@@ -14,7 +14,7 @@ union Data {
 
 
 int main(){
-    printf("Primitive data type:\n ");
+    printf("Primitive data type:\n");
     int a = 1;
     printf("This is integer data types %d size = %lu byte\n",a ,sizeof(a));
     char ch ='A';
@@ -76,5 +76,6 @@ int main(){
     d.i = 10;
     d.f = 3.14;  // Overwrites `i`
     printf("f = %.2f\n", d.f);
+    printf("%lu" , sizeof(d));
     return 0;
 }
