@@ -22,7 +22,7 @@ void prims(int num)
 		{
 			min=cost[i][j];
 			a=i;
-			b=j;
+		 	b=j;
 		}
 		printf("\n Edge %d:(%d - %d) cost:%d",ne++,a,b,min);
 		mincost=mincost+min;
