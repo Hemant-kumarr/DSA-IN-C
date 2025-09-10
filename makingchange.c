@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX 999999 
+#define MAX 999
 
 int min(int a, int b) {
     return (a < b) ? a : b;
