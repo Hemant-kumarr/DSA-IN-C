@@ -44,8 +44,6 @@ void kruskal(int cost[10][10], int num) {
 }
 int main() {
     int num, i, j, cost[10][10];
-   
-    printf("\n\t\t\tKruskal's Algorithm");
     printf("\n\nEnter the number of nodes: ");
     scanf("%d", &num);
     printf("\nEnter the cost adjacency matrix:\n\n");
